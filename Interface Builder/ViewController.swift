@@ -9,7 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var Changeling: UIButton!
+    @IBOutlet weak var Changed: UILabel!
+    @IBAction func Buttonclick(_ sender: Any) {
+       Changed.textColor = UIColor.white
+        if Changed == UIColor.white {
+            Changeling.setTitle("on", for: .normal)
+        }
+        else{
+            Changeling.setTitle("off", for: .normal)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
